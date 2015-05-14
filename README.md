@@ -1,17 +1,19 @@
 # graFwd.js
-Simple Graphana-style Flow metrics forwarder for nProbe/nTopng
+Simple Graphana-style Flow metrics forwarder for nProbe/nTopng in nodejs
+
+graFwd extracts selective metrics from an nProbe/ntopng JSON flow and couples them with a root parameter from the same report in plaintext protocol for Graphite.
 
 ###Setup:
-
+```
 npm install --save node-netcat
+```
 
 ###Usage:
-
+```
 nodejs graFwd.js 
 TCP server listening for JSON on port 7000 at localhost.
 Shipping to client 127.0.0.1:2003
-
-graFwd extracts selective metrics from an nProbe/ntopng JSON flow and couples them with a root parameter from the same report in plaintext protocol for Graphite.
+```
 
 ###Example 
 Pairing IN/OUT Bytes and Packets by L7 Protocol (use your imagination):
